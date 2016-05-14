@@ -60,7 +60,7 @@ public class Quadtree {
     }
 
     public Node getNodeWherePointIs(int x, int y) {
-        return Quadtree.this.getNodeWherePointIs(new Point(x, y));
+        return getNodeWherePointIs(new Point(x, y));
     }
 
     public Node getNodeWherePointIs(Point p) {
@@ -72,7 +72,7 @@ public class Quadtree {
     }
 
     public int getDeepness(int x, int y) {
-        Node node = Quadtree.this.getNodeWherePointIs(x, y);
+        Node node = getNodeWherePointIs(x, y);
         int result = -9999;
         if (node != null) {
             if (node.pointIsHere(new Point(x, y))) {
